@@ -35,7 +35,13 @@ public class Deck {
      * @param values is an array containing all of the card point values.
      */
     public Deck(String[] ranks, String[] suits, int[] values) {
-        List<Card> deck = new ArrayList<Card>();
+        List<Card> deck = new ArrayList<>();
+        for (int a = 0; a < suits.length; a++)
+        {
+            for (int i = 0; i < ranks.length; i++){
+                deck.add(new Card(ranks[i], suits[i], values[i]));
+            }
+        }
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
     }
 
@@ -45,6 +51,13 @@ public class Deck {
      * @return true if this deck is empty, false otherwise.
      */
     public boolean isEmpty() {
+        if (cards.size() == 0){
+            return true;
+        }
+        else
+        {
+            return false;
+        }
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
     }
 
