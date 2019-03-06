@@ -55,6 +55,9 @@ public class ElevensBoard extends Board {
      */
     @Override
     public boolean isLegal(List<Integer> selectedCards) {
+        if (selectedCards.size() == 2){
+            if 
+        }
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 9 *** */
     }
 
